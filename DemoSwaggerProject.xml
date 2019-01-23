@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="dd51f32f-e148-441a-86b1-fa1c57f899b0" activeEnvironment="Default" name="Demo_Swagger_Project" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="96a7bc4a-0dbf-4cf1-b63b-d8e27bde2e5e" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://deploydemobd.azurewebsites.net" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://deploydemobd.azurewebsites.net</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Swagger.json" path="/swagger/v1/swagger.json" id="a56c0bb2-2f6d-4cd4-bcbf-e564c573654a">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Swagger.json 1" id="4935547d-8e5a-4288-80f6-d020f0de35b2" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html</con:mediaType>
+          <con:status>403</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=utf-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:swag="https://deploydemobd.azurewebsites.net/swagger/v1/swagger.json">swag:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="4a1f4dd6-b6b1-4c5d-b7d9-3a7b85f56089" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://deploydemobd.azurewebsites.net</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://deploydemobd.azurewebsites.net/swagger/v1/swagger.json</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="53fa32a0-ef26-42d6-b51d-eed8facba1ab" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://deploydemobd.azurewebsites.net" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache/>
+    <con:endpoints>
+      <con:endpoint>https://deploydemobd.azurewebsites.net</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Swagger.json" path="/swagger/v1/swagger.json" id="0351c078-51af-4c6f-9312-0f8d21090322">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Swagger.json 1" id="89bcb319-0bb8-4156-8b3f-a82a67ef4013" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html</con:mediaType>
+          <con:status>403</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="6d848374-ae6b-407b-8f1a-eed471a3c3ad" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://deploydemobd.azurewebsites.net</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://deploydemobd.azurewebsites.net/swagger/v1/swagger.json</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="43c5e06f-28e2-4ddb-b8ec-87213897e148" name="TestSuite1">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="03b75617-53f0-4060-b8a3-e2d123326bf7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="SimpleExecution" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="restrequest" name="GETRequest" id="065ef47c-54e4-4350-921e-771ee2a8432c">
+        <con:settings/>
+        <con:config service="https://deploydemobd.azurewebsites.net" methodName="Swagger.json 1" resourcePath="/swagger/v1/swagger.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GETRequest" id="b73fdd3f-c90f-4a5b-97f3-0cc58d116e41" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>https://deploydemobd.azurewebsites.net</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://deploydemobd.azurewebsites.net/swagger/v1/swagger.json</con:originalUri>
+            <con:assertion type="Response SLA Assertion" id="9e508b88-788f-4543-98a1-388ae385db2c" name="Response SLA">
+              <con:configuration>
+                <SLA>1660</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="2cf845d3-6e27-475c-b9cb-9870efde7fc6" name="Contains">
+              <con:configuration>
+                <token>200</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Invalid HTTP Status Codes" id="20453db0-3d16-4856-ab65-2185919334a5" name="Invalid HTTP Status Codes">
+              <con:configuration>
+                <codes>403</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="PUT_Request" id="d0a72e66-1b68-43ee-874c-25019644436a">
+        <con:settings/>
+        <con:config service="https://deploydemobd.azurewebsites.net" resourcePath="/swagger/v1/swagger.json" methodName="Swagger.json 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="PUT_Request" id="6d848374-ae6b-407b-8f1a-eed471a3c3ad" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://deploydemobd.azurewebsites.net</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://deploydemobd.azurewebsites.net/swagger/v1/swagger.json</con:originalUri>
+            <con:assertion type="Response SLA Assertion" id="c7e99d24-6762-4906-ab06-86953cc86c6a" name="Response SLA">
+              <con:configuration>
+                <SLA>2000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Invalid HTTP Status Codes" id="96bd4e71-96be-4e49-8c11-b130383f3bff" name="Invalid HTTP Status Codes">
+              <con:configuration>
+                <codes>403</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="81c89537-93e0-43e8-8538-c65297dd536e" name="Success Codes">
+              <con:configuration>
+                <token>200</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="c45b2154-7513-4097-b86a-d96f83a005fd" name="Required Code">
+              <con:configuration>
+                <token>true</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Execution" id="bc925538-b948-4692-acfa-a2b80bf10760">
+        <con:settings/>
+        <con:config>
+          <script>def start = testRunner.testCase.getPropertyValue( "Counter" )?.toInteger()
+def end = testRunner.testCase.getPropertyValue( "Count" )?.toInteger()
+while(start&lt;end)
+{
+log.info("start Is: " + start)
+def date = new Date()
+def runTime = date.format("yyyy-MM-dd HH-mm-ss")
+def tCase = testRunner.testCase.testSuite.testCases["SimpleExecution"]
+def tStep = tCase.testSteps["GETRequest"]
+//myRequestStep = testRunner.testCase.getTestStepByName('GETRequest')
+tStep.run(testRunner, context)
+def GetrequestData = new String(tStep.testRequest.messageExchange.rawRequestData)
+def GetresponseData = new String(tStep.testRequest.messageExchange.rawResponseData)
+def RootRequestFileName = "C:/Users/deepika.gupta1/Desktop/BD/Projects/Demo_Framework/Results/GETRequest" + runTime +".xml"
+new File(RootRequestFileName).write(GetrequestData)
+def RootResponseFileName = "C:/Users/deepika.gupta1/Desktop/BD/Projects/Demo_Framework/Results/GETRequestResp" + runTime +".xml"
+new File( RootResponseFileName).write(GetresponseData)
+testRunner.waitUntilFinished()
+def tStep2 = tCase.testSteps["PUT_Request"]
+tStep2.run(testRunner, context)
+def GetrequestData2 = new String(tStep2.testRequest.messageExchange.rawRequestData)
+def GetresponseData2 = new String(tStep2.testRequest.messageExchange.rawResponseData)
+def RootRequestFileName2 = "C:/Users/deepika.gupta1/Desktop/BD/Projects/Demo_Framework/Results/PUTRequest" + runTime +".xml"
+new File(RootRequestFileName2).write(GetrequestData2)
+def RootResponseFileName2 = "C:/Users/deepika.gupta1/Desktop/BD/Projects/Demo_Framework/Results/PUTRequestResp" + runTime +".xml"
+new File( RootResponseFileName2).write(GetresponseData2)
+testRunner.waitUntilFinished()
+start=start+1;
+
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:properties>
+        <con:property>
+          <con:name>Counter</con:name>
+          <con:value>0</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Count</con:name>
+          <con:value>3</con:value>
+        </con:property>
+      </con:properties>
+    </con:testCase>
+    <con:testCase id="4f013065-6091-4ab0-b056-7b02576e4786" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Sample_Groovy" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="groovy" name="JDBC Connection" id="27ac80e4-568c-4fc5-8681-263b624c03de">
+        <con:settings/>
+        <con:config>
+          <script>// Import the Groovy class required to work with SQL databases.
+import groovy.sql.Sql
+
+// Set up database connection properties.
+def url = 'jdbc:mysql://mydatabase.com/DatabaseVariable' /* IMPORTANT: must start with jdbc:mysql:// */
+def user = 'DatabaseUser'
+def password = 'DatabasePassword'
+def driver = 'com.mysql.jdbc.Driver'
+
+// Register the MySQL JDBC driver – required for Groovy to send requests to the database.
+com.eviware.soapui.support.GroovyUtils.registerJdbcDriver( driver ) 
+
+// Connect to the SQL instance.
+def sql = Sql.newInstance(url, user, password, driver)
+
+// Use the SQL instance.
+// ...
+
+// Close the SQL instance.
+sql.close()</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Excel Integration" id="6fa965fc-5f1c-43b2-97ab-496442d9e8fc">
+        <con:settings/>
+        <con:config>
+          <script>import jxl.*
+import jxl.write.*
+
+def value1
+def value2
+def value3
+//pull value from test suite properties
+def RowSelector = testRunner.testCase.testSuite.getPropertyValue( "RowSelector" )?.toInteger()
+//Read Excel
+Workbook workbook = Workbook.getWorkbook(new File("D:\\TestData-Mix.xls"))
+File datasheet = new File("D:\\TestData-Mix.xls")
+if (datasheet.exists()){
+log.info("Exist")
+}
+else {
+log.info("Blank")
+}
+def start = testRunner.testCase.testSuite.getPropertyValue( "Start" )?.toInteger() 
+def end = testRunner.testCase.testSuite.getPropertyValue( "End" )?.toInteger()
+while(start&lt;=end)
+{
+start=start+1;
+//testRunner.testCase.testSuite.setPropertyValue( "Start", start )
+log.info("start Is: " + start)
+// loading Values from Excel (A1) to TestSuite properties
+value1 = workbook.getSheet(0).getCell(0, start).getContents() //cell A1
+testRunner.testCase.testSuite.setPropertyValue( "TestSuitevalue1", value1 )
+log.info("Value1 Is: " + value1)
+// loading Values from Excel (B1) to TestSuite properties
+value2 = workbook.getSheet(0).getCell(1, start).getContents() //cell A1
+testRunner.testCase.testSuite.setPropertyValue( "TestSuitevalue2", value2 )
+log.info("Value2 Is: " + value2)
+// loading Values from Excel (C1) to TestSuite properties
+value3 = workbook.getSheet(0).getCell(2, start).getContents() //Cell C1
+testRunner.testCase.testSuite.setPropertyValue( "TestSuitevalue3", value3 )
+log.info("Value3 Is: " + value3)
+}
+workbook.close()
+//End Groovy step</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="jdbc" name="JDBC Request" id="3c90c462-c36c-48b8-8097-90d27bc81805">
+        <con:settings/>
+        <con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties/>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:properties>
+      <con:property>
+        <con:name>RowSelector</con:name>
+        <con:value>1</con:value>
+      </con:property>
+      <con:property>
+        <con:name>Start</con:name>
+        <con:value>0</con:value>
+      </con:property>
+      <con:property>
+        <con:name>End</con:name>
+        <con:value>5</con:value>
+      </con:property>
+      <con:property>
+        <con:name>TestSuitevalue1</con:name>
+        <con:value>Uranium</con:value>
+      </con:property>
+      <con:property>
+        <con:name>TestSuitevalue2</con:name>
+        <con:value>92</con:value>
+      </con:property>
+      <con:property>
+        <con:name>TestSuitevalue3</con:name>
+        <con:value>U</con:value>
+      </con:property>
+    </con:properties>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:sensitiveInformation/>
+</con:soapui-project>
